@@ -4,4 +4,17 @@ Install yaourt using `sudo pacman -S base-devel yaourt`
 
 If a yaourt install fails make sure `sudo pacman -S base-devel` is installed correctly
 
+`sudo pacman -S vim`
 Set up vim install `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim` and install the plugins in the vimrc using `vim +PluginInstall +qall`
+
+Applications to install:
+```
+sudo pacman -S synergy
+sudo pacman -S terminator
+sudo pacman -S poedit
+sudo pacman -S chromium
+yaourt -S visual-studio-code
+yaourt -S gitkraken
+yaourt -S firefox-developer
+
+```
