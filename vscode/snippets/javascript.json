@@ -1,0 +1,81 @@
+{
+/*
+	// Place your snippets for Javascript (Babel) here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	"console.log": {
+		"prefix": "log",
+		"body": "console.log(\"${1}\");$2"
+	},
+	"ember controller": {
+		"prefix": "controller",
+		"body": "export default Ember.Controller.extend({\n  ${1}\n})"
+	},
+	"ember route": {
+		"prefix": "route",
+		"body": "export default Ember.Route.extend({\n  ${1}\n})"
+	},
+	"ember Component": {
+		"prefix": "Component",
+		"body": "export default Ember.Component.extend({\n  ${1}\n})"
+	},
+	"ember infinite scroll route": {
+		"prefix": "infiniteroute",
+		"body": "import InfiniteScroll from 'servicebook-frontend/mixins/sbc-infinite-scroll';\n\nexport default Ember.Route.extend( InfiniteScroll, {\n  ${1}\n})"
+	},
+	"config service": {
+		"prefix": "config",
+		"body": "config: Ember.inject.service(),"
+	},
+	"flash service": {
+		"prefix": "flashservice",
+		"body": "flash: Ember.inject.service(),"
+	},
+	"i18 service": {
+		"prefix": "i18nservice",
+		"body": "i18n: Ember.inject.service(),"
+	},
+	"store service": {
+		"prefix": "storeService",
+		"body": "store: Ember.inject.service(),"
+	},
+	"inject service": {
+		"prefix": "inject",
+		"body": "${1}: Ember.inject.service(),"
+	},
+	"flash message": {
+		"prefix": "flashmessage",
+		"body": "this.get(\"flash\").message(${1})"
+	},
+	"on init": {
+		"prefix": "oninit",
+		"body": "${1}: Ember.on(\"init\", function() {\n    ${2}\n  })"
+	},
+	"actions": {
+		"prefix": "actions",
+		"body": "actions: {\n  ${1}\n}"
+	},
+	"computed property": {
+		"prefix": "computedprop",
+		"body": "${1}: Ember.computed(\"${2}\", function(){\n  ${3}\n})"
+	},
+	"ember observer": {
+		"prefix": "observer",
+		"body": "${1}: Ember.observer(\"${2}\", function(){\n    ${3}\n  }),"
+	},
+	"ember model": {
+		"prefix": "modelEmber",
+		"body": "import DS from 'ember-data';\n\nexport default DS.Model.extend({\n  ${1}\n});"
+	}
+}
