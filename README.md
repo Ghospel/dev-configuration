@@ -16,5 +16,7 @@ sudo pacman -S chromium
 yaourt -S visual-studio-code
 yaourt -S gitkraken
 yaourt -S firefox-developer
+yaourt -S postman
+yaourt -S android-studio
 
 ```
