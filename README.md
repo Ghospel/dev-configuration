@@ -7,6 +7,8 @@ If a yaourt install fails make sure `sudo pacman -S base-devel` is installed cor
 `sudo pacman -S vim`
 Set up vim install `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim` and install the plugins in the vimrc using `vim +PluginInstall +qall`
 
+Make sure only jdk8-openjdk is installed and set as default using `sudo archlinux-java set java-8-openjdk`.
+
 Applications to install:
 ```
 sudo pacman -S synergy
