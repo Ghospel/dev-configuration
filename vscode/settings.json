@@ -15,11 +15,26 @@
         "**/bower_components": true,
         "**/migrations": true,
         "**/tmp": true,
-        "**/dist": true
+        "**/dist": true,
+        "**/ember-cordova": true
     },
 
+    "typescript.check.npmIsInstalled": false,
     "[javascript]": {
         "editor.tabSize": 2
     },
-    "typescript.check.npmIsInstalled": false
+    "[handlebars]": {
+        "editor.tabSize": 2
+    },
+    "window.zoomLevel": 0,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    }
 }

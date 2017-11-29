@@ -1,0 +1,15 @@
+{
+	"model charfield": {
+		"prefix": "model_charfield",
+		"body": "$1 = models.CharField(max_length=$2, null=$3, blank=$4)",
+		"description": "model charfield"
+	},
+
+	"model biginteger": {
+		"prefix": "model_biginteger",
+		"body": [
+			"$1 = models.BigIntegerField(null=$2, blank=$3)"
+		],
+		"description": "model biginteger"
+	}
+}

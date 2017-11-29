@@ -36,31 +36,77 @@
 	},
 	"config service": {
 		"prefix": "config",
-		"body": "config: Ember.inject.service(),"
+		"body": "config: service(),"
 	},
 	"flash service": {
 		"prefix": "flashservice",
-		"body": "flash: Ember.inject.service(),"
+		"body": "flash: service(),"
 	},
 	"i18 service": {
 		"prefix": "i18nservice",
-		"body": "i18n: Ember.inject.service(),"
+		"body": "i18n: service(),"
 	},
 	"store service": {
 		"prefix": "storeService",
-		"body": "store: Ember.inject.service(),"
+		"body": "store: service(),"
+	},
+	"session service": {
+		"prefix": "sessionService",
+		"body": "session: service(),"
+	},
+	"tools service": {
+		"prefix": "toolsService",
+		"body": "tools: service(),"
 	},
 	"inject service": {
 		"prefix": "inject",
-		"body": "${1}: Ember.inject.service(),"
+		"body": "${1}: service(),"
 	},
 	"flash message": {
 		"prefix": "flashmessage",
-		"body": "this.get(\"flash\").message(${1})"
+		"body": "this.get(\"flash\").message(${1});"
 	},
 	"on init": {
 		"prefix": "oninit",
-		"body": "${1}: Ember.on(\"init\", function() {\n    ${2}\n  })"
+		"body": "${1}: Ember.on(\"init\", function() {\n    ${2}\n  }),"
+	},
+	"oninsert": {
+		"prefix": "oninsert",
+		"body": [
+			"onInsertElement: Ember.on('didInsertElement', function () {",
+			"  ${1}",
+			"}),"
+		],
+		"description": "oninsert"
+	},
+	"didreceive attributes": {
+		"prefix": "didreceive",
+		"body": [
+			"onDidReceiveAttrs: Ember.on('didReceiveAttrs', function(){",
+			"  ${1}",
+			"}),"
+		],
+		"description": "didreceive attributes"
+	},
+	"seti18n": {
+		"prefix": "seti18",
+		"body": "this.i18n = this.get('i18n');"
+	},
+	"setstore": {
+		"prefix": "setstore",
+		"body": "this.store = this.get('store');"
+	},
+	"setflash": {
+		"prefix": "setflash",
+		"body": "this.flash = this.get('flash');"
+	},
+	"const service": {
+		"prefix": "constservice",
+		"body": "const {service} = Ember.inject;"
+	},
+	"set services": {
+		"prefix": "setservices",
+		"body": "setServices: Ember.on('init', function() {\n ${1} \n}),"
 	},
 	"actions": {
 		"prefix": "actions",
@@ -68,7 +114,7 @@
 	},
 	"computed property": {
 		"prefix": "computedprop",
-		"body": "${1}: Ember.computed(\"${2}\", function(){\n  ${3}\n})"
+		"body": "${1}: Ember.computed(\"${2}\", function(){\n  ${3}\n}),"
 	},
 	"ember observer": {
 		"prefix": "observer",
