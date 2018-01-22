@@ -12,6 +12,7 @@
     },
     "search.exclude": {
         "**/node_modules": true,
+        "**/.history": true,
         "**/bower_components": true,
         "**/migrations": true,
         "**/tmp": true,
@@ -23,8 +24,14 @@
     "[javascript]": {
         "editor.tabSize": 2
     },
+    "[scss]": {
+        "editor.tabSize": 2
+    },
     "[handlebars]": {
         "editor.tabSize": 2
+    },
+    "[python]": {
+
     },
     "window.zoomLevel": 0,
     "gitlens.advanced.messages": {
@@ -36,5 +43,19 @@
         "suppressNoRepositoryWarning": false,
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
-    }
+    },
+    "cryptoticker.cryptoSymbols": [
+        "BTC",
+        "BCH",
+        "ETH",
+        "XMR",
+        "XRP",
+        "LTC",
+        "ZEC",
+        "DASH"
+    ],
+
+    "cryptoticker.cryptoCurrency": "EUR",
+
+    "cryptoticker.cryptoExchange": "Kraken"
 }

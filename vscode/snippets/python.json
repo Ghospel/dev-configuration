@@ -11,5 +11,179 @@
 			"$1 = models.BigIntegerField(null=$2, blank=$3)"
 		],
 		"description": "model biginteger"
+	},
+	"model date": {
+		"prefix": "model_date",
+		"body": [
+			"$1 = models.DateTimeField(default=timezone.now, blank=True, null=True)"
+		],
+		"description": "model date"
+	},
+	"model time": {
+		"prefix": "model_time",
+		"body": [
+			"$1 = models.TimeField(default=timezone.now, blank=True, null=True)"
+		],
+		"description": "model time"
+	},
+	"model bool": {
+		"prefix": "model_bool",
+		"body": [
+			"$1 = models.BooleanField($2)"
+		],
+		"description": "model bool"
+	},
+	"model foreignkey": {
+		"prefix": "model_foreignkey",
+		"body": [
+			"$1 = models.ForeignKey($2, related_name=\"$3\")"
+		],
+		"description": "model foreign key"
+	},
+	"model decimal": {
+		"prefix": "modeldecimal",
+		"body": [
+			"$1 = models.DecimalField(max_digits=$2, decimal_places=$3, null=True, blank=True)"
+		],
+		"description": "model decimal field"
+	},
+	"modelbase": {
+		"prefix": "modelbase",
+		"body": [
+			"from django.db import models",
+			"from apps.shared.model_mixins import ModelMixinBundle, HashedPKModelMixin",
+			"",
+			"",
+			"class $1(ModelMixinBundle, HashedPKModelMixin):",
+			"    $2"
+		],
+		"description": "modelbase"
+	},
+	"serializer": {
+		"prefix": "serializer",
+		"body": [
+			"from rest_framework import serializers",
+			"",
+			"class $1(serializers.ModelSerializer):",
+			"    $2"
+		],
+		"description": "serializer"
+	},
+	"id serializer": {
+		"prefix": "id_serializer",
+		"body": [
+			"id = serializers.CharField(read_only=True, source='key')"
+		],
+		"description": "id serializer"
+	},
+	"charfield serializer": {
+		"prefix": "charfield_serializer",
+		"body": [
+			"$1 = serializers.CharField(required=$2)"
+		],
+		"description": "charfield serializer"
+	},
+	"date serializer": {
+		"prefix": "date_serializer",
+		"body": [
+			"$1 = serializers.DateTimeField(required=True)"
+		],
+		"description": "date serializer"
+	},
+	"keyfield serializer": {
+		"prefix": "keyfield_serializer",
+		"body": [
+			"$1 = KeyField(required=$2, queryset=$3)"
+		],
+		"description": "keyfield serializer"
+	},
+	"integer serializer": {
+		"prefix": "integer_serializer",
+		"body": [
+			"$1 = serializers.IntegerField(required=$2)"
+		],
+		"description": "integer serializer"
+	},
+	"decimal serializer": {
+		"prefix": "decimalserializer",
+		"body": [
+			"$1 = serializers.DecimalField(max_digits=$2, decimal_places=$3, required=True)"
+		],
+		"description": "decimal serializer"
+	},
+	"timefield serializer": {
+		"prefix": "timefield_serializer",
+		"body": [
+			"$1 = serializers.TimeField(required=$2)"
+		],
+		"description": "timefield serializer"
+	},
+	"boolean serializer": {
+		"prefix": "boolean_serializer",
+		"body": [
+			"$1 = serializers.BooleanField(required=$2)"
+		],
+		"description": "boolean serializer"
+	},
+	"meta serializer": {
+		"prefix": "metaserializer",
+		"body": [
+			"class Meta:",
+			"    model = $1",
+			"",
+			"    fields = (",
+			"        $2",
+			"    )"
+		],
+		"description": "meta serializer"
+	},
+	"filterbase": {
+		"prefix": "filterbase",
+		"body": [
+			"from django_filters import rest_framework as filters, OrderingFilter",
+			"",
+			"",
+			"class $1(filters.FilterSet):",
+			"    $2"
+		],
+		"description": "filter base"
+	},
+	"charfilter": {
+		"prefix": "charfilter",
+		"body": [
+			"$1 = filters.CharFilter(name=\"$2\")"
+		],
+		"description": "charfilter"
+	},
+	"daterangefilter": {
+		"prefix": "daterangefilter",
+		"body": [
+			"$1 = filters.DateFromToRangeFilter(required=$2)"
+		],
+		"description": "daterangefilter"
+	},
+
+	"orderingfilter": {
+		"prefix": "orderingfilter",
+		"body": [
+		"sort = OrderingFilter(",
+        "    fields=(",
+        "        (\"$1\", \"$2\")",
+        "    )",
+    	")"
+		],
+		"description": "orderingfilter"
+	},
+
+	"viewbase": {
+		"prefix": "viewbase",
+		"body": [
+			"from rest_framework import mixins",
+			"from rest_framework.viewsets import GenericViewSet",
+			"",
+			"class $1(GenericViewSet):",
+			"    $2"
+		],
+		"description": "viewbase"
 	}
 }

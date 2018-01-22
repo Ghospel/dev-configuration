@@ -120,8 +120,32 @@
 		"prefix": "observer",
 		"body": "${1}: Ember.observer(\"${2}\", function(){\n    ${3}\n  }),"
 	},
+	"adapterember": {
+		"prefix": "adapterember",
+		"body": [
+			"import Adapter from\"../adapters/application\";",
+			"",
+			"export default Adapter.extend({",
+			"  pathForType: function (){",
+			"    return\"$1\";",
+			"  }",
+			"});"
+		]
+	},
+	"testblock": {
+		"prefix": "it",
+		"body": [
+			"it('$1', () =>{",
+			"  ",
+			"});"
+		]
+	},
 	"ember model": {
 		"prefix": "modelEmber",
 		"body": "import DS from 'ember-data';\n\nexport default DS.Model.extend({\n  ${1}\n});"
+	},
+	"modelattr": {
+		"prefix": "modelattr",
+		"body": "$1: DS.attr($2),"
 	}
 }
