@@ -15,9 +15,9 @@ sudo pacman -S synergy
 sudo pacman -S terminator
 sudo pacman -S poedit
 sudo pacman -S chromium
-yaourt -S visual-studio-code
+yaourt -S visual-studio-code-bin
 yaourt -S gitkraken
-yaourt -S firefox-developer
+yaourt -S firefox-developer-edition
 yaourt -S postman
 yaourt -S android-studio
 
