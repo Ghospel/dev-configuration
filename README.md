@@ -1,5 +1,7 @@
 This repo contains files and instructions I use/need to setup my development environment. This all is used with Manjaro.
 
+update your system first with: sudo pacman -Syu
+
 Install yaourt using `sudo pacman -S base-devel yaourt`
 
 If a yaourt install fails make sure `sudo pacman -S base-devel` is installed correctly
